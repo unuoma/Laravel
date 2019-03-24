@@ -4,9 +4,12 @@
 
 
 
-        <h1>This is my about page</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-
+        <h1 class="cover-heading">About iCentra</h1>
+        <p class="lead">We are a leading marketing group here to solve all your marketing needs.</p> <br>
+        <p class="lead">We are located in over 30 countries. </p>
+        <p class="lead">
+                <a href="#" class="btn btn-lg btn-primary">Learn more</a>
+        </p>
 
 @endsection
 

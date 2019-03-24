@@ -11,19 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
-Route::get('/about', function () {
-    return view('pages.about');
-});
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
-Route::post('/contact', function () {
+Route::get('/', 'PageController@home')->name('home');
+Route::get('/about', 'PageController@about')->name('about');
+Route::get('/contact', 'PageController@contact')->name('contact');
 
-    $data = request() ->all();
-
-    echo "Email: " . $data['email'] . '<br>';
-    echo "Body: " . $data['body'];
-});
+Route::post('/contact', 'PageController@store')->name('contact.store');
+Route::get('/thanks/{name}', 'PageController@thanks')->name('thanks');
